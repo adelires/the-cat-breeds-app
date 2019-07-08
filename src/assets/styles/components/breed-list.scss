@@ -1,0 +1,54 @@
+.breed-list {
+  &__result-info {
+    text-align: center;
+    font-size: 0.9em;
+    color: $color-grey;
+  }
+  &__buttons {
+    text-align: center;
+  }
+  &__load-more {
+    background-color: $color-white;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 2px;
+    color: $color-dark-grey;
+    border: 2px solid $color-light-grey;
+  }
+  &__item {
+    @include flexbox();
+    padding: 20px 0;
+    font-size: 14px;
+    @media screen and (max-width: 796px) {
+        @include flex-direction(column);
+    }
+    .item {
+      &-img {
+        width: 200px;
+        min-width: 200px;
+        img {
+          width: 100%;
+        }
+        @media screen and (max-width: 796px) {
+            width: 150px;
+            min-width: 150px;
+        }
+      }
+      &-info {
+        margin-left: 30px;
+        @media screen and (max-width: 796px) {
+            margin-left: 0;
+            margin-top: 20px;
+        }
+      }
+      &-description {
+        margin-top: 0;
+      }
+      &-data {
+        list-style: none;
+        margin: 20px 0;
+        padding: 0;
+      }
+    }
+  }
+}

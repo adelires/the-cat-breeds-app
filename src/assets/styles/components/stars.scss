@@ -1,0 +1,14 @@
+.stars {
+  @include flexbox();
+  margin: 10px 0;
+  &__label {
+    width: 150px;
+  }
+  &__rank {
+    font-size: 1.1em;
+    color: $color-grey;
+    .star-active {
+      color: $color-green;
+    }
+  }
+}

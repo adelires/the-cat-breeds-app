@@ -1,0 +1,26 @@
+.app {
+  @include flexbox();
+  min-height: 100vh;
+
+  &__sidebar {
+    min-height: 100vh;
+    background-color: $color-blue;
+    @include box-shadow(1px 0px 2px 0px rgba(0, 0, 0, 0.2));
+  }
+  &__content {
+    width: 100%;
+    min-height: 100vh;
+  }
+  &__header {
+    background-color: $color-light-blue;
+    padding: 10px 50px;
+  }
+  &__page {
+    background-color: $color-white;
+    border-left: 5px solid $color-blue;
+    color: $color-dark-grey;
+    margin: 50px;
+    padding: 30px;
+    @include box-shadow(1px 0px 3px 1px rgba(0, 0, 0, 0.1));
+  }
+}

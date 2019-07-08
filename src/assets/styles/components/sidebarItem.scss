@@ -1,0 +1,18 @@
+.sidebar-item {
+  padding: 5px 0 10px;
+  font-size: 1.1em;
+  a {
+    text-decoration: none;
+    color: $color-blue-grey;
+
+    &:hover {
+      color: $color-white;
+    }
+  }
+  &__icon {
+    font-size: 1.1em;
+  }
+  &__title {
+      margin-left: 10px;
+  }
+}

@@ -1,0 +1,22 @@
+
+.breed{
+
+    &__search{
+        padding: 20px 0px 40px;
+        border-bottom: 2px dotted $color-light-grey;
+        &-label{
+            font-size: 1.5em;
+            padding-right: 25px; 
+        }
+        &-input{
+            width: 400px;
+            height: 40px;
+            border-radius: 2px;
+            border: 1px solid $color-grey;
+            padding: 10px;
+        }
+        &-loader {
+            margin-left: 10px;
+        }
+    }
+}

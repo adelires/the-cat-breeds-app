@@ -1,0 +1,25 @@
+.header {
+    @include flexbox();
+    @include justify-content(space-between);
+    @include align-items(center);
+    &__title{
+        color: $color-white;
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+  &__user-option {
+    @include flexbox();
+    @include align-items(center);
+    color: $color-light-grey;
+      .user-avatar{    
+          width: 50px;
+          height: 50px;
+          margin-right: 10px;
+          img{
+              width: 100%;
+              border-radius: 50%;
+              object-fit: cover;
+          }
+      }
+  }
+}

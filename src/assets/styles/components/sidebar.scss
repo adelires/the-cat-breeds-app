@@ -1,0 +1,40 @@
+.sidebar{
+    padding: 20px;
+    width: 20em;
+    min-height: 100vh;
+    position: relative;
+    @include transition(250ms all ease);
+    &--collapsed {
+        width: 5em;
+        @include transition(250ms all ease);
+        .sidebar {
+            &__header {
+                @include justify-content(space-around);
+            }
+            &__logo img {
+                display: none;
+            }
+            &__nav {
+                text-align: center;
+            }
+        }
+    }
+    &__header{
+        @include flexbox();
+        @include justify-content(space-between);
+        padding: 5px 0 10px;
+        border-bottom: 2px dotted $color-light-blue;
+    }
+    &__logo{
+        width: 10em;
+    }
+    &__collapse{
+        color: $color-light-grey;
+        padding-bottom: 28px;
+    }
+    &__nav{
+        list-style: none;
+        padding: 20px 0;
+        margin: 0;
+    }
+}
