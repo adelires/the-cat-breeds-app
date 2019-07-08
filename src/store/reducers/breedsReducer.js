@@ -5,7 +5,7 @@ const initialState = {
     search: '',
     found: false,
     searched: false,
-    showing: 5,
+    showing: 1,
     loading: false
 };
 
@@ -17,14 +17,14 @@ const breedsReducer = (state = initialState, action) => {
                 ...action.payload,
                 found: action.payload.breeds.length > 0,
                 searched: true,
-                showing: 5
+                showing: 1
             }
             break;
         case SHOW_MORE_BREEDS:
             const { breeds, showing } = state;
             state = {
                 ...state,
-                showing: breeds.length > showing ? showing + 5 : showing
+                showing: breeds.length > showing ? showing + (showing === 1 ? 4 : 5) : showing
             }
             break;
         case TOGGLE_BREEDS_LOADER:

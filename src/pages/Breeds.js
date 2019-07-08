@@ -3,6 +3,8 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { searchBreeds } from '../store/actions/breedsAction';
 import BreedList from '../components/BreedList';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class Breeds extends Component {
 
@@ -20,7 +22,7 @@ class Breeds extends Component {
                 <div className="breed__search">
                     <label htmlFor="breed" className="breed__search-label">Search Breed: </label>
                     <input type="text" name="breed" className="breed__search-input" onKeyUp={this.handleChange} />
-                    {loading ? <span className="breed__search-loader"><i className="fas fa-lg fa-spinner fa-spin"></i></span> : null}
+                    {loading ? <span className="breed__search-loader"><FontAwesomeIcon icon={faSpinner} spin /></span> : null}
                 </div>
                 <div className="">
                     <BreedList />
